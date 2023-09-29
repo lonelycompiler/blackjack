@@ -80,49 +80,16 @@ public class Deck {
 		return cards.remove( cards.size()-1 );
 	}
 	
-	//this will take an index in the deck, and it will then be converted to the name of the card (rank, suit, color)
-	public String convertCard(int index) { 
-		//System.out.println("Card being converted is " + cards.get(index));
-		//get the number/rank
-		String rank = cards.get(index).substring(0,1);
-		if( rank.equals("J") ) {
-			rank = "Jack";
-		}else if ( rank.equals("Q") ) {
-			rank = "Queen";
-		}else if ( rank.equals("K") ) {
-			rank = "King";
-		}else if ( rank.equals("A") ) {
-			rank = "Ace";
-		}else {
-			rank = cards.get(index).substring(0,1); //nothing happens
-		}
-		
-		//get the suit
-		String suit = cards.get(index).substring(1, 2);
-		if( suit.equals("C") ) {
-			suit = "Clubs, Black";
-		}else if ( suit.equals("D") ) {
-			suit = "Diamonds, Red";
-		}else if ( suit.equals("H") ) {
-			suit = "Hearts, Red";
-		}else {
-			suit = "Spades, Black"; //nothing happens
-		}
-			
-		
-		return "" + rank + " of " + suit;
-	}
-	
 	//THIS IS FOR DEBUGGING PURPOSES
 	//this will println all cards in the arraylist
-	public String toString() {
+	/*public String toString() {
 		String var = "";
 		var += "There are [" + cards.size() + "] in the deck right now.\n";
 		for(int i = 0; i < cards.size()-1; i++) {
-			var += convertCard(i) + "\n";
+			var += deck.get(i) + "\n";
 		}
 		return var;
-	}
+	}*/
 
 	//if deck is empty then
 	private boolean checkDeckEmpty() {
